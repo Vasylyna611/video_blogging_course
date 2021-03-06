@@ -1,0 +1,36 @@
+#home {
+    background-color: #F6EBEB;
+}
+html body {
+    margin: 0;
+    padding: 0;
+    overflow: auto; 
+}
+.logo {
+    display: inline-block;
+    width: 80px;
+    padding-left: 70px;
+    padding-top: 50px;
+}
+ .menu ul {
+     float: right;
+     padding-top: 50px;
+     padding-right: 70px;
+ }
+
+.menu li {
+    display: inline;
+    padding-right: 40px;
+    padding-bottom: 10px;
+}
+a {
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+    font-family: "Roboto";
+    font-weight: 500;
+    text-decoration: none;
+    color: darkslategray;
+    font-size: medium;
+}
+.baner {
+    width: 100%;
+}
