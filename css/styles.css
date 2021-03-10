@@ -71,6 +71,7 @@ h2 {
     color: #2c2c2c;
     font-weight: 900;
     font-size: 3rem;
+    text-align: center;
 }
 h3 {
     font-family: "Roboto";
@@ -81,6 +82,19 @@ p {
     font-family: "Roboto";
     color: gray;
 }
-#coaches h3 {
+h4 {
+    font-family: "Roboto";
     color: #2c2c2c;
+    font-size: 2rem;
+}
+small {
+    font-family: "Roboto";
+}
+#about-us p {
+    text-align: center;
+    padding-left: 270px;
+    padding-right: 270px;
+    line-height: 30px;
+    letter-spacing: 1px;
+
 }
