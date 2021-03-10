@@ -1,38 +1,68 @@
 #home {
     background-color: #F6EBEB;
 }
-html body {
-    margin: 0;
+body {
     padding: 0;
-    overflow: auto; 
+    margin: 0;
+    overflow: auto;
 }
-.logo {
-    display: inline-block;
-    width: 80px;
-    padding-left: 70px;
-    padding-top: 50px;
+:root {
+   @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+   font-family: "Roboto"; 
 }
- .menu ul {
-     float: right;
-     padding-top: 50px;
-     padding-right: 70px;
- }
 
+header {
+    background-image: url("../image/two_girls.png");
+    height: 100%;
+    min-height: 700px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo img {
+    padding-left: 50px;
+    width: 80px;
+}
+.menu ul {
+    display: flex;
+    margin-right: 100px;
+    justify-content: space-around;
+    height: 100%;
+}
 .menu li {
-    display: inline;
-    padding-right: 40px;
+    list-style-type: none;
+    margin: 10px 10px 10px 10px;
+    height: 100%;
+}
+
+.menu li a{
+    height: 100%;
+}
+
+a:hover {
+    background-color: gray;
 }
 a {
-    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
-    font-family: "Roboto";
     font-weight: 500;
     text-decoration: none;
     color: #2c2c2c;
     font-size: medium;
 }
-.baner {
-    width: 100%;
-}
+/* header .baner {
+    background-image: url(/image/two_girls.png);
+    background-position: top;
+    background-size: cover;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    text-align: left;
+    flex-direction: column;
+} */
 h1 {
     font-family: "Roboto";
     font-weight: 900;
