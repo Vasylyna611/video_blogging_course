@@ -2,32 +2,71 @@ html body {
     margin: 0;
     padding: 0;
     @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
-    font-family: "Roboto"; 
+    font-family: "Roboto";
+    color: #2c2c2c;
+    background-color: #f2eee8;
 }
-/* header {
-    background-image: url("../image/two_girls.png");
-    min-height: 700px;
-    background-position: center;
-    background-repeat: no-repeat;
+#home {
+    display: flex;
+}
+.banner {
+    background-image: url(../image/two_girls.png);
     background-size: cover;
+}
+.menu {
+    display: flex;
+    flex-direction: row;
+}
+.menu li {
+    list-style-type: none;
+}
+.menu a {
+    text-decoration: none;
+    padding: 10px;
 }
 .logo img {
     width: 80px;
 }
-nav {
-    display: flex;
-} */
-
-header .menu {
-    list-style-type: none;
+h1 {
+    font-weight: 900;
+    font-size: 5rem;
 }
-
-header .menu a {
-    text-decoration: none;
+h2 {
+    text-align: center;
+    font-weight: 900;
+    font-size: 4rem;
 }
-
-header .menu {
+h3 {
+    font-size: 1.5rem;
+}
+.video-production h3, .online-courses h3, .workshops h3, .portfolio h3 {
+    color: red;
+}
+.bloggers h3, .business h3, .musicians h3, .children h3, .intensive h3 {
+    color: red;
+}
+#about-us p {
+    text-align: center;
+    padding-left: 270px;
+    padding-right: 270px;
+    line-height: 30px;
+    letter-spacing: 1px;
+}
+#offers {
     display: flex;
-    justify-content: space-around;
-    justify-items: center;
+}
+.video-production img {
+    width: 80px;
+}
+.online-courses img {
+     width: 80px;
+}
+.workshops img {
+    width: 80px;
+}
+.portfolio img {
+    width: 80px;
+}
+#our-courses {
+    display: flex;
 }

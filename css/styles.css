@@ -1,61 +1,66 @@
-body {
-    padding: 0;
+* {
     margin: 0;
+    padding: 0;
+}
+body {
+    max-width: 980px;
+    margin: auto;
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+    font-family: "Roboto"; 
+}
+.logo img {
+    width: 80px;
+}
+header .menu {
+    list-style-type: none;
+}
+header .menu {
+    flex-direction: row;
+}
+header .menu a {
+    text-decoration: none;
 
+    padding: 3px;
 }
-:root {
-   @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
-   font-family: "Roboto"; 
+@media (min-width: 480px) {
+
+header nav {
+        display: flex;
+        background-color: #f2eee8;
+    }
+header .menu {
+        display: flex;
+        justify-content: space-around;
+        flex: 1;
+        align-items: center;
+        flex-direction: row;
+    }
 }
-header {
+header .banner {
+    background-image: url(../image/two_girls.png);
+    background-size: cover;
+    background-position: center;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+/*header {
     background-image: url("../image/two_girls.png");
     min-height: 700px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-}
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 
 }
-.logo img {
-    width: 80px;
-}
-.menu ul {
-    display: flex;
-}
-.menu li {
-    list-style-type: none;
 
-    height: 100%;
-}
-
-a:hover {
-    background-color: gray;
-}
 a {
     font-weight: 500;
     text-decoration: none;
     color: #2c2c2c;
     font-size: medium;
-}
-/* header .baner {
-    background-image: url(/image/two_girls.png);
-    background-position: top;
-    background-size: cover;
-    width: auto;
-    display: flex;
-    justify-content: center;
-    text-align: left;
-    flex-direction: column;
-} */
-h1 {
-    font-weight: 900;
-    font-size: 5rem;
-    color: #2c2c2c;
-}
+
 button {
     background-color: #1A38B1;
     width: 240px;
@@ -65,7 +70,6 @@ button {
     font-size: medium;
     letter-spacing: 1px;
     font-weight: 500;
-    position: relative;
     border: #1A38B1;
 }
 #home p {
@@ -96,11 +100,4 @@ h4 {
     color: #2c2c2c;
     font-size: 2rem;
 }
-#about-us p {
-    text-align: center;
-    padding-left: 270px;
-    padding-right: 270px;
-    line-height: 30px;
-    letter-spacing: 1px;
-
-}
+*/
