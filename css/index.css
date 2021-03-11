@@ -5,31 +5,98 @@ html body {
     font-family: "Roboto";
     color: #2c2c2c;
     background-color: #f2eee8;
+    max-width: 100%;
+    padding-left: 10%;
 }
-#home {
-    display: flex;
+nav {
+    padding-top: 2%;
 }
-.banner {
-    background-image: url(../image/two_girls.png);
-    background-size: cover;
+
+.logo, header .banner h1 {
+    text-align: left;
+    width: 50%;
+    font-size: 5rem;
+    font-weight: 900;
 }
-.menu {
-    display: flex;
-    flex-direction: row;
-}
-.menu li {
-    list-style-type: none;
-}
-.menu a {
-    text-decoration: none;
-    padding: 10px;
+header .banner p {
+     font-size: 1rem;
+     line-height: 30px;
+     letter-spacing: 1px;
 }
 .logo img {
-    width: 80px;
+    width: 120px;
 }
-h1 {
-    font-weight: 900;
-    font-size: 5rem;
+.burger-icon {
+    font-size: 3rem;
+}
+.burger-icon:hover {
+    cursor: pointer;
+}
+#burger-checkbox {
+    display: none;
+}
+header .menu {
+    list-style-type: none;
+    display: none;
+    padding-right: 10%;
+}
+header input:checked ~ .menu {
+    display: flex;
+}
+header .menu {
+    flex-direction: column;
+}
+header .menu a {
+    text-decoration: none;
+    padding: 3px;
+    color: #2c2c2c;
+}
+header .menu a:hover {
+    font-weight: bold;
+}
+@media (min-width: 480px) { 
+    header nav {
+        display: flex;
+    }
+    header .burger-icon {
+        display: none;
+    }
+    header .menu {
+        display: flex;
+        justify-content: space-around;
+        flex: 1;
+        align-items: center;
+        flex-direction: row;
+    }
+}
+header .banner {
+    background-image: url("../image/two_girls.png");
+    background-size: cover;
+    background-position: center;
+    border: none;
+    min-height: 700px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+}
+.banner button {
+    padding: 1em 2.5em;
+    border: 0.6em solid #1A38B1;
+    background-color: #1A38B1;
+    margin: 0 0.3em 0.3em 0;
+    border-radius: 0.12em;
+    color: white;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    font-weight: 600;
+    text-align: center;
+    transition: color 0.7s;
+}
+.banner button:hover {
+    background-color: darkblue;
+    border: 0.6em solid darkblue;
+    cursor: pointer;
 }
 h2 {
     text-align: center;
@@ -44,13 +111,6 @@ h3 {
 }
 .bloggers h3, .business h3, .musicians h3, .children h3, .intensive h3 {
     color: red;
-}
-#about-us p {
-    text-align: center;
-    padding-left: 270px;
-    padding-right: 270px;
-    line-height: 30px;
-    letter-spacing: 1px;
 }
 #offers {
     display: flex;
@@ -67,6 +127,17 @@ h3 {
 .portfolio img {
     width: 80px;
 }
-#our-courses {
+.about {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.about h2 {
+    margin-bottom: 0;
+}
+
+.about p {
+    width: 60%;
 }
