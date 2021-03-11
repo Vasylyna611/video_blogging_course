@@ -1,0 +1,33 @@
+html body {
+    margin: 0;
+    padding: 0;
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+    font-family: "Roboto"; 
+}
+/* header {
+    background-image: url("../image/two_girls.png");
+    min-height: 700px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.logo img {
+    width: 80px;
+}
+nav {
+    display: flex;
+} */
+
+header .menu {
+    list-style-type: none;
+}
+
+header .menu a {
+    text-decoration: none;
+}
+
+header .menu {
+    display: flex;
+    justify-content: space-around;
+    justify-items: center;
+}
