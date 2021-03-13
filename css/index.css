@@ -1,30 +1,52 @@
-html body {
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+:root {
+    font-family: "Roboto", "Open sans";
+    --background-color: #f2eee8;
+    --main-text-color: #2c2c2c;
+    --accent-text-color: #FF0000;
+    --button-banner-color: #1A38B1;
+    --button-banner-text-color: #FFFFFF;
+    --button-banner-hover-color: #0000ff;
+    scroll-behavior: smooth;
+}
+* {
     margin: 0;
     padding: 0;
-    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
-    font-family: "Roboto";
-    color: #2c2c2c;
-    background-color: #f2eee8;
-    max-width: 100%;
-    padding-left: 10%;
+}
+body {
+    max-width: 1280px;
+    margin: auto;
+    background: var(--background-color);
 }
 nav {
-    padding-top: 2%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 5%;
 }
-
-.logo, header .banner h1 {
-    text-align: left;
-    width: 50%;
-    font-size: 5rem;
-    font-weight: 900;
+nav .menu {
+    justify-content: space-around;
 }
-header .banner p {
-     font-size: 1rem;
-     line-height: 30px;
-     letter-spacing: 1px;
+nav .logo {
+    width: 40%;
 }
 .logo img {
-    width: 120px;
+    max-width: 120px;
+}
+.banner h1 {
+    font-size: 4rem;
+    color: var(--main-text-color);
+    text-align: left;
+    font-weight: 900;
+    margin-left: 5%;
+}
+.banner p {
+    font-size: 1rem;
+    color: var(--main-text-color);
+    text-align: left;
+    letter-spacing: 1px;
+    margin-left: 5%; 
 }
 .burger-icon {
     font-size: 3rem;
@@ -32,112 +54,163 @@ header .banner p {
 .burger-icon:hover {
     cursor: pointer;
 }
+
 #burger-checkbox {
     display: none;
 }
 header .menu {
     list-style-type: none;
     display: none;
-    padding-right: 10%;
 }
 header input:checked ~ .menu {
     display: flex;
 }
+
 header .menu {
     flex-direction: column;
 }
 header .menu a {
     text-decoration: none;
+    color: var(--main-text-color);
     padding: 3px;
-    color: #2c2c2c;
 }
 header .menu a:hover {
-    font-weight: bold;
+    text-decoration: underline;
 }
-@media (min-width: 480px) { 
-    header nav {
+@media (min-width: 480px) {
+
+    header {
         display: flex;
+        flex-direction: column;
     }
+
     header .burger-icon {
         display: none;
     }
+
+
     header .menu {
         display: flex;
-        justify-content: space-around;
+        align-content: space-around;
         flex: 1;
-        align-items: center;
+        align-items: flex-start;
         flex-direction: row;
     }
+
 }
+
+@media (max-width: 480px) {
+    header .logo {
+        display: none;
+    }
+    header {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
 header .banner {
-    background-image: url("../image/two_girls.png");
+    background-image: url(../img/two_girls.png);
     background-size: cover;
     background-position: center;
-    border: none;
-    min-height: 700px;
+    min-height: 400px;
     display: flex;
     align-items: flex-start;
     justify-content: center;
     flex-direction: column;
 }
+
 .banner button {
     padding: 1em 2.5em;
-    border: 0.6em solid #1A38B1;
-    background-color: #1A38B1;
+    border: 0.6em solid var(--button-banner-color);
+    background-color: var(--button-banner-color);
     margin: 0 0.3em 0.3em 0;
     border-radius: 0.12em;
-    color: white;
+    color: var(--button-banner-text-color);
     font-size: 0.8rem;
     letter-spacing: 1px;
     font-weight: 600;
     text-align: center;
     transition: color 0.7s;
+    margin-left: 5%;
 }
 .banner button:hover {
-    background-color: darkblue;
-    border: 0.6em solid darkblue;
+    background-color: var(--button-banner-hover-color);
+    border: 0.6em solid var(--button-banner-hover-color);
     cursor: pointer;
 }
-h2 {
+.about h2 {
     text-align: center;
     font-weight: 900;
-    font-size: 4rem;
+    font-size: 3rem;
+    padding-top: 5%;
+    padding-bottom: 3%;
 }
-h3 {
-    font-size: 1.5rem;
-}
-.video-production h3, .online-courses h3, .workshops h3, .portfolio h3 {
-    color: red;
-}
-.bloggers h3, .business h3, .musicians h3, .children h3, .intensive h3 {
-    color: red;
-}
-#offers {
-    display: flex;
+.about p {
+    text-align: center;
+    padding-left: 20%;
+    padding-right: 20%;
 }
 .video-production img {
-    width: 80px;
+    max-width: 100px;
+    padding-top: 20%;
 }
 .online-courses img {
-     width: 80px;
+    max-width: 100px;
+    padding-top: 20%;
 }
 .workshops img {
-    width: 80px;
+    max-width: 100px;
+    padding-top: 20%;
 }
 .portfolio img {
-    width: 80px;
+    max-width: 100px;
+    padding-top: 20%;
 }
-.about {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.offers {
+    display: grid;
+    padding-left: 5%;
+}
+.video-production h3, .online-courses h3, .workshops h3, .portfolio h3 {
+    color: var(--accent-text-color);
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: left;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+.video-production p, .online-courses p, .workshops p, .portfolio p {
+    text-align: left;
+    padding-right: 20%;
+}
+@media (min-width: 640px) {
+
+    .offers {
+        display: grid;
+        grid-gap: 5px;
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+@media (min-width: 800px) {
+
+    .offers {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    
+}
+
+@media (min-width: 980px) {
+
+    .offers {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+.courses h2 {
     text-align: center;
-}
-
-.about h2 {
-    margin-bottom: 0;
-}
-
-.about p {
-    width: 60%;
+    font-weight: 900;
+    font-size: 3rem;
+    padding-top: 5%;
+    padding-bottom: 3%;
 }
