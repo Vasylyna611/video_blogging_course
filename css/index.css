@@ -8,32 +8,40 @@
     --button-banner-color: #1A38B1;
     --button-banner-text-color: #FFFFFF;
     --button-banner-hover-color: #0000ff;
+    --offers-background-color: #FFFFFF;
     scroll-behavior: smooth;
 }
+
 * {
     margin: 0;
     padding: 0;
 }
+
 body {
     max-width: 1280px;
     margin: auto;
     background: var(--background-color);
 }
+
 nav {
     display: flex;
     flex-direction: row;
     align-items: center;
     padding: 5%;
 }
+
 nav .menu {
     justify-content: space-around;
 }
+
 nav .logo {
     width: 40%;
 }
+
 .logo img {
-    max-width: 120px;
+    max-width: 100px;
 }
+
 .banner h1 {
     font-size: 4rem;
     color: var(--main-text-color);
@@ -41,6 +49,7 @@ nav .logo {
     font-weight: 900;
     margin-left: 5%;
 }
+
 .banner p {
     font-size: 1rem;
     color: var(--main-text-color);
@@ -48,9 +57,11 @@ nav .logo {
     letter-spacing: 1px;
     margin-left: 5%; 
 }
+
 .burger-icon {
     font-size: 3rem;
 }
+
 .burger-icon:hover {
     cursor: pointer;
 }
@@ -58,10 +69,12 @@ nav .logo {
 #burger-checkbox {
     display: none;
 }
+
 header .menu {
     list-style-type: none;
     display: none;
 }
+
 header input:checked ~ .menu {
     display: flex;
 }
@@ -69,14 +82,17 @@ header input:checked ~ .menu {
 header .menu {
     flex-direction: column;
 }
+
 header .menu a {
     text-decoration: none;
     color: var(--main-text-color);
     padding: 3px;
 }
+
 header .menu a:hover {
     text-decoration: underline;
 }
+
 @media (min-width: 480px) {
 
     header {
@@ -134,11 +150,13 @@ header .banner {
     transition: color 0.7s;
     margin-left: 5%;
 }
+
 .banner button:hover {
     background-color: var(--button-banner-hover-color);
     border: 0.6em solid var(--button-banner-hover-color);
     cursor: pointer;
 }
+
 .about h2 {
     text-align: center;
     font-weight: 900;
@@ -146,48 +164,54 @@ header .banner {
     padding-top: 5%;
     padding-bottom: 3%;
 }
+
 .about p {
     text-align: center;
     padding-left: 20%;
     padding-right: 20%;
+    padding-bottom: 5%;
 }
-.video-production img {
-    max-width: 100px;
-    padding-top: 20%;
+
+.offers img {
+    max-width: 60px;
+    margin-top: 10%;
+    margin-bottom: 10%;
 }
-.online-courses img {
-    max-width: 100px;
-    padding-top: 20%;
-}
-.workshops img {
-    max-width: 100px;
-    padding-top: 20%;
-}
-.portfolio img {
-    max-width: 100px;
-    padding-top: 20%;
-}
+
 .offers {
     display: grid;
-    padding-left: 5%;
+    padding-bottom: 10%;
 }
+
+.offers div {
+    background-color: var(--offers-background-color);
+    padding: 10%;
+    border-radius: 2%;
+}
+
 .video-production h3, .online-courses h3, .workshops h3, .portfolio h3 {
     color: var(--accent-text-color);
     font-size: 1.5rem;
     font-weight: 700;
     text-align: left;
-    padding-top: 5%;
-    padding-bottom: 5%;
 }
+
 .video-production p, .online-courses p, .workshops p, .portfolio p {
     text-align: left;
-    padding-right: 20%;
+}
+
+@media (max-width: 480px) {
+    .offers {
+        display: grid;
+        grid-gap: 5%;
+        grid-auto-columns: 1fr;
+    }
 }
 @media (min-width: 640px) {
 
     .offers {
         display: grid;
-        grid-gap: 5px;
+        grid-gap: 5%;
         grid-template-columns: 1fr 1fr;
     }
 
@@ -198,7 +222,6 @@ header .banner {
     .offers {
         grid-template-columns: 1fr 1fr 1fr;
     }
-    
 }
 
 @media (min-width: 980px) {
@@ -207,10 +230,9 @@ header .banner {
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 }
-.courses h2 {
+
+/*.courses h2 {
     text-align: center;
     font-weight: 900;
     font-size: 3rem;
-    padding-top: 5%;
-    padding-bottom: 3%;
-}
+}/*
