@@ -174,8 +174,6 @@ header .banner {
 
 .offers img {
     max-width: 60px;
-    margin-top: 10%;
-    margin-bottom: 10%;
 }
 
 .offers {
@@ -183,23 +181,32 @@ header .banner {
     padding-bottom: 10%;
 }
 
-.offers div {
+.offers-container {
     background-color: var(--offers-background-color);
     padding: 10%;
     border-radius: 2%;
 }
 
-.video-production h3, .online-courses h3, .workshops h3, .portfolio h3 {
+.offers-container h3 {
     color: var(--accent-text-color);
     font-size: 1.5rem;
     font-weight: 700;
     text-align: left;
+    padding-top: 10%;
 }
 
-.video-production p, .online-courses p, .workshops p, .portfolio p {
+.offers-container p {
     text-align: left;
 }
 
+.img-container {
+    border-radius: 50%;
+    background: var(--background-color);
+    width: 90px;
+    height: 90px;
+    display: flex;
+    justify-content: center;
+}
 @media (max-width: 480px) {
     .offers {
         display: grid;
