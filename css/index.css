@@ -225,7 +225,7 @@ header .banner {
 @media (max-width: 640px) {
     .offers {
         display: grid;
-        grid-gap: 3%;
+        grid-gap: 1%;
         grid-auto-columns: 1fr;
     }
 }
@@ -235,7 +235,7 @@ header .banner {
 
     .offers {
         display: grid;
-        grid-gap: 3%;
+        grid-gap: 1%;
         grid-template-columns: 1fr 1fr;
     }
 }
@@ -303,15 +303,21 @@ header .banner {
     background-color: var(--carousel-item-color);
 }
 
-.slide-text {
-    position: absolute;
-    font-size: 35px;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+.slide-text h3 {
+    color: var(--accent-text-color);
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: left;
+    padding-top: 3%;
+    padding-bottom: 1%; 
 }
 
-.slider-dots {
+.slide-text p {
+    text-align: left;
+    line-height: 25px;
+}
+
+/*.slider-dots {
     text-align: center;
 }
 
@@ -329,7 +335,7 @@ header .banner {
 .active,
 .slider-dots-item:hover {
     background-color: var(--main-text-color);
-}
+}*/
 
 /*Анімація слайдів*/
 .slider .item {
@@ -353,11 +359,4 @@ header .banner {
     to {
         opacity: 1
     }
-}
- 
-.slide-text h3 {
-    text-align: center;
-    color: var(--button-banner-text-color);
-    font-size: 3.5rem;
-    font-weight: 900;
 }
