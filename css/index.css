@@ -19,7 +19,7 @@
 }
 
 body {
-    max-width: 1280px;
+    max-width: 100%;
     margin: auto;
     background: var(--background-color);
 }
@@ -303,40 +303,6 @@ header .banner {
     background-color: var(--carousel-item-color);
 }
 
-.slide-text h3 {
-    color: var(--accent-text-color);
-    font-size: 1.5rem;
-    font-weight: 700;
-    text-align: left;
-    padding-top: 3%;
-    padding-bottom: 1%; 
-}
-
-.slide-text p {
-    text-align: left;
-    line-height: 25px;
-}
-
-/*.slider-dots {
-    text-align: center;
-}
-
-.slider-dots-item{
-    cursor: pointer;
-    height: 12px;
-    width: 12px;
-    margin: 0 2px;
-    background-color: var(--carousel-item-color);
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
-}
-
-.active,
-.slider-dots-item:hover {
-    background-color: var(--main-text-color);
-}*/
-
 /*Анімація слайдів*/
 .slider .item {
     -webkit-animation-name: fade;
@@ -359,4 +325,100 @@ header .banner {
     to {
         opacity: 1
     }
+}
+
+.slide-text h3 {
+    color: var(--accent-text-color);
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: center; 
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+.slide-text p {
+    text-align: center;
+    line-height: 25px;
+}
+
+.form-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    background: var(--main-text-color);
+}
+
+
+.user-form {
+    background-color: var(--offers-background-color);
+    padding: 5%;
+    border-radius: 2%;
+}
+
+.user-form form {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--offers-background-color);
+}
+
+.form-item img {
+    width: 50%;
+}
+
+.user-form h2 {
+    color: var(--main-text-color);
+    font-weight: 900;
+    font-size: 3.5rem;
+    padding-bottom: 5%;
+}
+
+.user-form p {
+    font-size: 1.5rem;
+    padding-bottom: 5%;
+}
+
+input[type=submit] {
+    padding: 3%;
+    margin: 2%;
+    border: 0.3em solid var(--button-banner-color);
+    background-color: var(--button-banner-color);
+    border-radius: 0.12em;
+    color: var(--button-banner-text-color);
+    font-size: 0.8rem;
+    font-weight: 600;
+    transition: color 0.7s;
+    width: 80%;
+}
+
+input[type=submit]:hover {
+    background-color: var(--button-banner-hover-color);
+    border: 0.3em solid var(--button-banner-hover-color);
+    cursor: pointer;
+}
+
+input[type=text] {
+    width: 70%;
+    padding: 3%;
+    margin: 2%;
+    background: var(--background-color);
+    border: 0.3em solid var(--background-color);
+    border-radius: 0.12em;
+}
+
+input[type=text]:focus {
+    border: 0.2em solid var(--button-banner-hover-color);
+}
+
+input[type=email] {
+    width: 70%;
+    padding: 3%;
+    margin: 2%;
+    background: var(--background-color);
+    border: 0.3em solid var(--background-color);
+    border-radius: 0.12em;
+}
+
+input[type=email]:focus {
+    border: 0.2em solid var(--button-banner-hover-color);
 }
