@@ -388,7 +388,7 @@ input[type=submit] {
     font-size: 0.8rem;
     font-weight: 600;
     transition: color 0.7s;
-    width: 80%;
+    width: 78%;
 }
 
 input[type=submit]:hover {
@@ -408,6 +408,7 @@ input[type=text] {
 
 input[type=text]:focus {
     border: 0.2em solid var(--button-banner-hover-color);
+    outline: none;
 }
 
 input[type=email] {
@@ -421,4 +422,77 @@ input[type=email] {
 
 input[type=email]:focus {
     border: 0.2em solid var(--button-banner-hover-color);
+    outline: none;
+}
+
+.coaches h2 {
+    text-align: center;
+    font-weight: 900;
+    font-size: 3.5rem;
+    padding-bottom: 5%;
+    padding-top: 5%;
+}
+
+.our-coaches h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+.our-coaches img {
+    width: 50%;
+}
+
+#coaches {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    padding-bottom: 5%;
+}
+
+.our-coaches a {
+    text-decoration: none;
+    color: var(--main-text-color);
+    padding: 3%;
+}
+
+.our-coaches a:hover {
+    color: var(--accent-text-color);
+}
+
+.our-coaches small {
+    color: var(--accent-text-color);
+}
+
+footer h2 {
+    color: var(--button-banner-text-color);
+    font-weight: 900;
+    font-size: 3.5rem;
+    padding-bottom: 5%;
+    padding-top: 5%;
+}
+
+footer {
+    display: flex;
+    background: var(--main-text-color);
+}
+
+footer .contacts {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-direction: column;
+    text-align: left;
+    padding: 5%; 
+}
+
+footer h4 {
+    color: var(--button-banner-text-color);
+    padding-bottom: 5%;
+    padding-top: 5%;
+}
+
+footer img {
+    width: 50px;
 }
