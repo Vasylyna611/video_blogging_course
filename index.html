@@ -124,69 +124,64 @@
             </form>
     </div>
     </section>
-    <div class="coaches"><h2>Our Coaches<span class="color-dot">.</span></h2></div>
-    <section id="coaches">
+    <div class="coaches-title"><h2>Our Coaches<span class="color-dot">.</span></h2></div>
+    <section class="coaches">
         <div class="our-coaches">
             <img src="img/girl_glasses.png" alt="Girl in glasses">
             <h3>Kendall Ernst</h3>
-            <small>Youtube | 5.5 M subscribers</small>
-            <br>
+            <hr>
+            <p>Youtube | 5.5 M subscribers</p>
             <a href="#">Follow<span class="arrow">⟶</span></a>
         </div>
         <div class="our-coaches">
             <img src="img/girl_blonde.png" alt="Blonde-haired girl">
             <h3>Tania Maisner</h3>
-            <small>Instagram | 1 M subscribers</small>
-            <br>
+            <hr>
+            <p>Instagram | 1 M subscribers</p>
             <a href="#">Follow<span class="arrow">⟶</span></a>
         </div>
         <div class="our-coaches">
             <img src="img/young_boy.png" alt="Dark-haired boy">
             <h3>Tomas Riddle</h3>
-            <small>Youtube | 3 M subscribers</small>
-            <br>
+            <hr>
+            <p>Youtube | 3 M subscribers</p>
             <a href="#">Follow<span class="arrow">⟶</span></a>
         </div>
         <div class="our-coaches">
             <img src="img/girl_curling.png" alt="Curling-hair girl">
             <h3>Jodie Foster</h3>
-            <small>TikTok | 2 M subscribers</small>
-            <br>
+            <hr>
+            <p>TikTok | 2 M subscribers</p>
             <a href="#">Follow<span class="arrow">⟶</span></a>
         </div>
     </section>
-</main>
-<footer></footer>
-<script src="js/carousel.js"></script>
-</body>
-</html>
-<!--    
-        <article>
-            <h2 id="autumn-course">Start Of Autumn Courses</h2>
-            <table>
-                <tr>
-                  <td>01</td>
-                  <td>October</td>
-                  <td><img src="image/family.svg" alt="Family icon"></td>
-                  <td>For Children</td>
-                  <td><button>Sign Up</button></td>
-                </tr>
-                <tr>
-                  <td>22</td>
-                  <td>November</td>
-                  <td><img src="image/man_with_horn.svg" alt="Man keeps horn"></td>
-                  <td>For Bloggers</td>
-                  <td><button>Sign Up</button></td>
-                </tr>
-                <tr>
-                    <td>02</td>
-                    <td>December</td>
-                    <td> <img src="image/camera.svg" alt="Camer icon"></td>
-                    <td><button>Sign Up</button></td>
-                </tr>
-            </table>
-        </article>
-    </main>-->
+    <section id="autumn-course">
+            <div class="schedule"><h2>Start Of Autumn Courses<span class="color-dot">.</span></h2></div>
+                <div class="children-course">
+                  <h3>01</h3>
+                  <h3>October</h3>
+                  <img src="img/family.svg" alt="Family icon">
+                  <h3>For Children</h3>
+                  <button>Sign Up</button>
+                </div>
+                <hr>
+                <div class="bloggers-course">
+                  <h3>22</h3>
+                  <h3>November</h3>
+                  <img src="img/man_with_horn.svg" alt="Man keeps horn">
+                  <h3>For Bloggers</h3>
+                  <button>Sign Up</button>
+                </div>
+                <hr>
+                <div class="intensive-course">
+                    <h3>02</h3>
+                    <h3>December</h3>
+                    <img src="img/camera.svg" alt="Camer icon">
+                    <h3>Intensive Course</h3>
+                    <button>Sign Up</button>
+                </div>
+        </section>
+    </main>
     <footer>
         <div class="contacts">
         <h2>Contacts<span class="color-dot">.</span></h2>
@@ -198,11 +193,15 @@
         <h4>OUR HOURS</h4>
         <p>Monday-Saturday: 11 AM - 9 PM</p>
         <p>Sunday: 11 AM - 7 PM</p></div>
-        <!--<a href="#"><img src="img/facebook_icon.png" alt="Facebook icon"></a>
-        <a href="#"><img src="img/instagram_icon.png" alt="Instagram icon"></a>
-        <a href="#"><img src="img/youtube_icon.png" alt="Youtube icon"></a>
-        <div class="logo">
-        <img src="img/logo_videostar.svg" alt="Logotype videostar"></div>-->
+        <div id="map">Map here</div>
+        <div><img src="img/logo_videostar.svg" alt="Logotype videostar"></a></div>
+        <div class="social-media">
+        <span><a href="#"><img src="img/facebook_icon.png" alt="Facebook icon"></a></span>
+        <span><a href="#"><img src="img/instagram_icon.png" alt="Instagram icon"></a></span>
+        <span><a href="#"><img src="img/youtube_icon.png" alt="Youtube icon"></a></span>
+        </div>
     </footer>
+    <script src="js/carousel.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap&libraries=&v=weekly"></script>
  </body>
 </html>
