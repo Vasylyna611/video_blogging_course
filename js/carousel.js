@@ -1,41 +1,30 @@
-let slideIndex = 1;
-showSlides(slideIndex);
- 
- 
-/* Функція показує наступний слайд, збільшуючи індекс на 1*/
-function plusSlide() {
-    showSlides(slideIndex += 1);
-}
- 
-/* Функція показує попередній слайд, зменшуючи індекс на 1*/
-function minusSlide() {
-    showSlides(slideIndex -= 1);  
-}
- 
-/*Функція встановлює поточний слайд*/
-function currentxSlide(n) {
-    showSlides(slideIndex = n);
-}
- 
-/*Основна функція*/
-function showSlides(n) {
-    let i;
-    let slides = document.getElementsByClassName("item");
-    let dots = document.getElementsByClassName("slider-dots-item");
-    if (n > slides.length) {
-      slideIndex = 1
-    }
-    if (n < 1) {
-        slideIndex = slides.length
-    }
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-    }
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-    }
-    slides[slideIndex - 1].style.display = "block";
-    dots[slideIndex - 1].className += " active";
-}
+$('#recipeCarousel').carousel({
+  interval: 10000
+})
 
-/*функція для карти*/
+$('.carousel .carousel-item').each(function(){
+    var minPerSlide = 3;
+    var next = $(this).next();
+    if (!next.length) {
+    next = $(this).siblings(':first');
+    }
+    next.children(':first-child').clone().appendTo($(this));
+
+    for (var i=0;i<minPerSlide;i++) {
+        next=next.next();
+        if (!next.length) {
+            next = $(this).siblings(':first');
+        }
+
+        next.children(':first-child').clone().appendTo($(this));
+      }
+});
+
+function myMap() {
+    var mapOptions = {
+        center: new google.maps.LatLng(51.5, -0.12),
+        zoom: 10,
+        mapTypeId: google.maps.MapTypeId.HYBRID
+    }
+var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+}

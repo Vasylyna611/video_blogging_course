@@ -262,70 +262,24 @@ header .banner {
 
 }
 
-.slider {
-    max-width: 80%;
-    position: relative;
-    margin: auto;
-    height: auto;
-    margin-bottom: 5%;
+#recipeCarousel {
+    width: 640px;
+    margin: 20px auto;
+    text-align: center;
 }
 
-/*Зображення масштабується по відношенню до батьківського елемента*/
-.slider .item img {
-    object-fit: cover;
+#recipeCarousel .slide-photo img{
     width: 100%;
-    height: 100%;
-    border: none;
-    box-shadow: none;
+    display: none;
 }
 
-.slider .prev, .slider .next {
-    cursor: pointer;
-    position: absolute;
-    top: 0;
-    top: 50%;
-    width: auto;
-    margin-top: -22px;
-    padding: 16px;
-    color: var(--main-text-color);
-    font-weight: bold;
-    font-size: 18px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-}
-.slider .next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
+#recipeCarousel .slide-photo img:first-child{
+    display: block;
 }
 
-.slider .prev:hover,
-.slider .next:hover {
-    background-color: var(--carousel-item-color);
-}
-
-/*Анімація слайдів*/
-.slider .item {
-    -webkit-animation-name: fade;
-    -webkit-animation-duration: 1.5s;
-    animation-name: fade;
-    animation-duration: 1.5s;
-}
-@-webkit-keyframes fade {
-    from {
-        opacity: .4
-    }
-    to {
-        opacity: 1
-    }
-}
-@keyframes fade {
-    from {
-        opacity: .4
-    }
-    to {
-        opacity: 1
-    }
-}
+.slide-buttons {
+    margin-top: 20px;
+}         
 
 .slide-text h3 {
     color: var(--accent-text-color);
@@ -681,8 +635,8 @@ footer .logo img {
 
 .contact-information {
     display: flex;
+    justify-content: space-between;
     background: var(--main-text-color);
-    padding-bottom: 10%;
 }
 
 footer {
@@ -717,4 +671,45 @@ section .contacts {
 
 section .contact-information {
     display: flex;
+}
+
+.map {
+    width: 50%;
+}
+
+
+
+/* css for carousel */
+@media (max-width: 768px) {
+    .carousel-inner .carousel-item > div {
+        display: none;
+    }
+    .carousel-inner .carousel-item > div:first-child {
+        display: block;
+    }
+}
+
+.carousel-inner .carousel-item.active,
+.carousel-inner .carousel-item-next,
+.carousel-inner .carousel-item-prev {
+    display: flex;
+}
+
+/* display 3 */
+@media (min-width: 768px) {
+
+    .carousel-inner .carousel-item-right.active,
+    .carousel-inner .carousel-item-next {
+      transform: translateX(33.333%);
+    }
+
+    .carousel-inner .carousel-item-left.active,
+    .carousel-inner .carousel-item-prev {
+      transform: translateX(-33.333%);
+    }
+}
+
+.carousel-inner .carousel-item-right,
+.carousel-inner .carousel-item-left{
+  transform: translateX(0);
 }
