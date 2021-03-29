@@ -3,14 +3,14 @@ $('#recipeCarousel').carousel({
 })
 
 $('.carousel .carousel-item').each(function(){
-    var minPerSlide = 3;
-    var next = $(this).next();
+    let minPerSlide = 3;
+    let next = $(this).next();
     if (!next.length) {
     next = $(this).siblings(':first');
     }
     next.children(':first-child').clone().appendTo($(this));
 
-    for (var i=0;i<minPerSlide;i++) {
+    for (let i=0;i<minPerSlide;i++) {
         next=next.next();
         if (!next.length) {
             next = $(this).siblings(':first');
@@ -20,11 +20,11 @@ $('.carousel .carousel-item').each(function(){
       }
 });
 
-function myMap() {
-    var mapOptions = {
+function googleMap() {
+    let mapOptions = {
         center: new google.maps.LatLng(51.5, -0.12),
         zoom: 10,
         mapTypeId: google.maps.MapTypeId.HYBRID
     }
-var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+let map = new google.maps.Map(document.getElementById("map"), mapOptions);
 }
